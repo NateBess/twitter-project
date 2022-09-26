@@ -1,13 +1,16 @@
+import { useState } from "react";
 import "./App.css";
+import Menu from "./components/Menu";
+import PageContent from "./components/PageContent";
 
 function App() {
+  const [currentPage, setCurrentPage] = useState("Home");
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
+      <main className="App-container">
+        <PageContent currentPage={currentPage} />
+      </main>
+      <Menu setCurrentPage={setCurrentPage} />
     </div>
   );
 }

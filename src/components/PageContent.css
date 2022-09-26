@@ -1,0 +1,60 @@
+/* HOMEPAGE STYLES IN THIS SECTION */
+.content-container {
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  margin-top: 1vh;
+}
+
+.content-item-container {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+#twit-title {
+  background-position: center;
+  width: 100%;
+}
+
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1vh;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 3vh;
+}
+
+.home-page-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+  background-color: white;
+  border-radius: 2vh;
+  padding-bottom: 2vh;
+}
+
+.home-page-card > h3 {
+  width: 100%;
+  background-color: rgb(12, 226, 98);
+  border-radius: 2vh 2vh 0 0;
+  padding: 1vh 0;
+}
+.home-page-card > p {
+  margin-top: 2vh;
+}
+.menu-tip > p {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+  border-radius: 1vh;
+  color: black;
+  padding: 1vh;
+  margin-bottom: 2vh;
+}
+.menu-tip > i {
+  font-size: 8vh;
+}
