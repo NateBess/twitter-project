@@ -35,6 +35,8 @@
   background-color: white;
   border-radius: 2vh;
   padding-bottom: 2vh;
+  box-shadow: 0vh 1vh 1vh -1vh;
+  width: 95%;
 }
 
 .home-page-card > h3 {
@@ -46,7 +48,7 @@
 .home-page-card > p {
   margin-top: 2vh;
 }
-.menu-tip > p {
+.menu-tip > h3 {
   display: flex;
   justify-content: center;
   margin-top: 10vh;

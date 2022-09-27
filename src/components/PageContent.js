@@ -18,7 +18,7 @@ function PageContent({ currentPage }) {
             </p>
           </div>
           <div className="menu-tip">
-            <p>Menu Button</p>
+            <h3>Menu Below</h3>
             <i class="fa-solid fa-arrow-down"></i>
           </div>
         </div>
