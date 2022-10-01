@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ContentItem from "./ContentItem";
 import "./PageContent.css";
 import twitTitle from "../images/twitx-title-pic.png";
+import SearchPage from "./SearchPage";
 
-function PageContent({ currentPage }) {
+function PageContent({ currentPage, searchResults }) {
   if (currentPage === "Home") {
     return (
       <div className="content-container width-container">
@@ -19,23 +20,19 @@ function PageContent({ currentPage }) {
           </div>
           <div className="menu-tip">
             <h3>Menu Below</h3>
-            <i class="fa-solid fa-arrow-down"></i>
+            <i className="fa-solid fa-arrow-down"></i>
           </div>
         </div>
       </div>
     );
   }
   if (currentPage === "Search") {
-    return (
-      <div className="content-container width-container">
-        <ContentItem />
-      </div>
-    );
+    return <SearchPage searchResults={searchResults} />;
   }
   if (currentPage === "Random") {
     return (
       <div className="content-container width-container">
-        <ContentItem />
+        <h1>TEST</h1>
       </div>
     );
   }
