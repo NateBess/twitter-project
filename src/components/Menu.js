@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Menu.css";
 
-function Menu({ setCurrentPage }) {
+function Menu({ setCurrentPage, getData }) {
   const [menuStatus, setMenuStatus] = useState(false);
   return (
     <div className="menu-container width-container">
@@ -33,11 +33,19 @@ function Menu({ setCurrentPage }) {
           <div className="menu-item menu-search-container">
             <input
               className="search-box"
+              id="search-box"
               type="search"
               placeholder="Search..."
+              autoComplete="false"
+              autoCorrect="false"
               onClick={() => setCurrentPage("Search")}
             ></input>
-            <button className="search-button">
+            <button
+              className="search-button"
+              onClick={() => {
+                getData();
+              }}
+            >
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>

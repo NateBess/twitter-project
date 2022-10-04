@@ -1,0 +1,48 @@
+.content-item-container {
+  background-color: white;
+  padding: 1vh 2vh;
+  font-size: 1.5vh;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-radius: 0.5vh;
+}
+
+.content-item-header {
+  display: flex;
+  gap: 1vh;
+}
+
+.content-item-header > img {
+  display: flex;
+  border-radius: 3vh;
+  margin-bottom: 2vh;
+}
+
+.content-header-names {
+  width: 40%;
+  text-align: center;
+  text-align: left;
+}
+.content-header-names > h1 {
+  font-size: 1.5vh;
+}
+.content-header-names > p {
+  font-size: 1.5vh;
+  color: rgb(81, 144, 232);
+}
+
+.content-metrics {
+  width: 100%;
+  text-align: right;
+  font-size: 2vh;
+}
+
+p > i {
+  color: rgb(80, 219, 126);
+}
+
+/* Text styles below */
+.content-text-container {
+  font-size: 2vh;
+}

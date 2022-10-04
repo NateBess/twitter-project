@@ -10,7 +10,7 @@
   background-color: #282c34;
   background-image: url("../images/Twit\ Background.png");
   background-size: stretch;
-  background-position: center;
+  overflow-y: hidden;
 }
 
 .App-logo {

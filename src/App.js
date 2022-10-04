@@ -4,20 +4,27 @@ import Menu from "./components/Menu";
 import PageContent from "./components/PageContent";
 import axios from "axios";
 
-const baseURL = "http://localhost:8000/";
+const baseURL = "http://192.168.0.117:8000/";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("Home");
   const [searchResults, setSearchResults] = useState([]);
   const [nextToken, setNextToken] = useState("");
 
+  const getSearchValue = () => {
+    const textValue = document.getElementById("search-box").value;
+    if (textValue === "") return "VancityReynolds";
+    else return textValue;
+  };
+
   const getData = async () => {
-    const searchData = await axios.get(baseURL);
+    const searchData = await axios.post(baseURL, {
+      searchValue: getSearchValue(),
+    });
+
     setSearchResults(searchData.data.tweets);
     setNextToken(searchData.data.nextToken);
     console.log("Data Requested");
-    console.log(searchData.data.tweets);
-    console.log(searchData.data.nextToken);
   };
 
   useEffect(() => {
@@ -29,7 +36,7 @@ function App() {
       <main className="App-container">
         <PageContent currentPage={currentPage} searchResults={searchResults} />
       </main>
-      <Menu setCurrentPage={setCurrentPage} />
+      <Menu setCurrentPage={setCurrentPage} getData={getData} />
     </div>
   );
 }
