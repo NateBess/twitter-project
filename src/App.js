@@ -25,6 +25,7 @@ function App() {
     setSearchResults(searchData.data.tweets);
     setNextToken(searchData.data.nextToken);
     console.log("Data Requested");
+    console.log(searchData.data.tweets);
   };
 
   useEffect(() => {

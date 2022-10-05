@@ -13,6 +13,18 @@ function ContentItem({
   previewImage,
   profilePic,
 }) {
+  const returnVideoLink = (videoOptions) => {
+    let largest = 0;
+    let largestURL = "";
+    videoOptions.map((videoObject) => {
+      if (videoObject.bit_rate > largest) {
+        largest = videoObject.bit_rate;
+        largestURL = videoObject.url;
+      }
+    });
+    return largestURL;
+  };
+
   return (
     <div className="content-item-container">
       <div className="content-item-header">
@@ -31,7 +43,13 @@ function ContentItem({
         </div>
       </div>
       <div className="content-text-container">{tweetText}</div>
-      {previewImage !== "NONE" ? <img src={previewImage}></img> : <div></div>}
+      {videoOptions !== "NONE" ? (
+        <video controls>
+          <source src={returnVideoLink(videoOptions)} type="video/mp4"></source>
+        </video>
+      ) : (
+        <div></div>
+      )}
       <p>{timeStamp}</p>
     </div>
   );
