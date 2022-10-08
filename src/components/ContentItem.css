@@ -38,11 +38,20 @@
   font-size: 2vh;
 }
 
-p > i {
-  color: rgb(80, 219, 126);
+.fa-heart {
+  color: rgb(232, 57, 57);
+}
+.fa-retweet {
+  color: rgb(88, 129, 240);
 }
 
 /* Text styles below */
 .content-text-container {
   font-size: 2vh;
+  margin-bottom: 2vh;
+}
+
+.timestamp {
+  margin-top: 1vh;
+  font-weight: bold;
 }

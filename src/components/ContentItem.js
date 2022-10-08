@@ -35,7 +35,7 @@ function ContentItem({
         </div>
         <div className="content-metrics">
           <p>
-            <i className="fa-solid fa-thumbs-up"></i> {metrics.like_count}
+            <i className="fa-solid fa-heart"></i> {metrics.like_count}
           </p>
           <p>
             <i className="fa-solid fa-retweet"></i> {metrics.retweet_count}
@@ -50,7 +50,7 @@ function ContentItem({
       ) : (
         <div></div>
       )}
-      <p>{timeStamp}</p>
+      <div className="timestamp">{timeStamp}</div>
     </div>
   );
 }
