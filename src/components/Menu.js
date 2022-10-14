@@ -36,8 +36,7 @@ function Menu({ setCurrentPage, getData }) {
               id="search-box"
               type="search"
               placeholder="Search..."
-              autoComplete="false"
-              autoCorrect="false"
+              autoComplete="off"
               onClick={() => setCurrentPage("Search")}
             ></input>
             <button
@@ -47,6 +46,14 @@ function Menu({ setCurrentPage, getData }) {
               }}
             >
               <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button
+              className="search-button search-button-content"
+              onClick={() => {
+                getData();
+              }}
+            >
+              <i className="fa-solid fa-comment"></i>
             </button>
           </div>
           <div className="menu-item" onClick={() => setCurrentPage("Random")}>

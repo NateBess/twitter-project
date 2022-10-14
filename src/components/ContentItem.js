@@ -10,18 +10,21 @@ function ContentItem({
   metrics,
   timeStamp,
   videoOptions,
+  pictureUrl,
   previewImage,
   profilePic,
 }) {
   const returnVideoLink = (videoOptions) => {
     let largest = 0;
     let largestURL = "";
-    videoOptions.map((videoObject) => {
-      if (videoObject.bit_rate > largest) {
-        largest = videoObject.bit_rate;
-        largestURL = videoObject.url;
-      }
-    });
+    try {
+      videoOptions.map((videoObject) => {
+        if (videoObject.bit_rate > largest) {
+          largest = videoObject.bit_rate;
+          largestURL = videoObject.url;
+        }
+      });
+    } catch {}
     return largestURL;
   };
 
@@ -31,7 +34,9 @@ function ContentItem({
         <img src={profilePic}></img>
         <div className="content-header-names">
           <h1>{name}</h1>
-          <p>@{username}</p>
+          <a href={`https://twitter.com/${username}`} target="_blank">
+            @{username}
+          </a>
         </div>
         <div className="content-metrics">
           <p>
@@ -43,6 +48,7 @@ function ContentItem({
         </div>
       </div>
       <div className="content-text-container">{tweetText}</div>
+      {pictureUrl !== "NONE" ? <img src={pictureUrl}></img> : <div></div>}
       {videoOptions !== "NONE" ? (
         <video controls>
           <source src={returnVideoLink(videoOptions)} type="video/mp4"></source>

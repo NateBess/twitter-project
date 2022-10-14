@@ -13,7 +13,7 @@ function App() {
 
   const getSearchValue = () => {
     const textValue = document.getElementById("search-box").value;
-    if (textValue === "") return "VancityReynolds";
+    if (textValue === "") return "dream";
     else return textValue;
   };
 
@@ -25,7 +25,6 @@ function App() {
     setSearchResults(searchData.data.tweets);
     setNextToken(searchData.data.nextToken);
     console.log("Data Requested");
-    console.log(searchData.data.tweets);
   };
 
   useEffect(() => {

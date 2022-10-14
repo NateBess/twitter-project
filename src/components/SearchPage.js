@@ -2,6 +2,7 @@ import React from "react";
 import ContentItem from "./ContentItem";
 
 function SearchPage({ searchResults }) {
+  console.log(searchResults);
   return (
     <div className="content-container width-container">
       {searchResults.map((tweet) => {
@@ -16,11 +17,13 @@ function SearchPage({ searchResults }) {
             metrics={tweet.metrics}
             timeStamp={tweet.timeStamp}
             videoOptions={tweet.video_options}
+            pictureUrl={tweet.picture_url}
             previewImage={tweet.preview_image_link}
             profilePic={tweet.profilePic}
           />
         );
       })}
+      <div className="space-container"></div>
     </div>
   );
 }

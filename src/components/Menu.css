@@ -35,7 +35,7 @@
   border-radius: 2vh 2vh 0 0;
   background-color: rgb(12, 226, 98);
   border-bottom: 2px solid black;
-  width: 100vw;
+  width: 98vw;
 }
 
 .icon-coloring {
@@ -85,6 +85,9 @@
   font-size: 2.5vh;
   font-family: "Reem Kufi Fun", sans-serif;
 }
+.search-button-content {
+  border-radius: 0 3vh 3vh 0;
+}
 .search-button {
   background-color: white;
   color: rgb(159, 159, 159);
@@ -92,13 +95,11 @@
   outline: none;
   font-size: 2.5vh;
   padding: 1vh;
-  border-radius: 0 3vh 3vh 0;
   background-color: rgb(233, 233, 233);
   font-family: "Reem Kufi Fun", sans-serif;
 }
 .search-button:hover {
   color: rgb(117, 247, 117);
-  -webkit-text-stroke: 1px black;
 }
 .search-button:active {
   color: rgb(117, 247, 117);
