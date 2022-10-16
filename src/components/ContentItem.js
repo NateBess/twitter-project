@@ -48,14 +48,19 @@ function ContentItem({
         </div>
       </div>
       <div className="content-text-container">{tweetText}</div>
-      {pictureUrl !== "NONE" ? <img src={pictureUrl}></img> : <div></div>}
-      {videoOptions !== "NONE" ? (
-        <video controls>
-          <source src={returnVideoLink(videoOptions)} type="video/mp4"></source>
-        </video>
-      ) : (
-        <div></div>
-      )}
+      <div className="content-media-container">
+        {pictureUrl !== "NONE" ? <img src={pictureUrl}></img> : <div></div>}
+        {videoOptions !== "NONE" ? (
+          <video controls>
+            <source
+              src={returnVideoLink(videoOptions)}
+              type="video/mp4"
+            ></source>
+          </video>
+        ) : (
+          <div></div>
+        )}
+      </div>
       <div className="timestamp">{timeStamp}</div>
     </div>
   );

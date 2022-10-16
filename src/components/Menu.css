@@ -109,23 +109,23 @@
 /* MEDIA QUERIES BELOW */
 
 @media only screen and (min-width: 821px) {
-  @media only screen and (max-height: 1200px) {
+  @media only screen and (max-height: 1250px) {
     .width-container {
-      width: 50vw;
+      width: 70vw;
     }
     .menu-items-container {
-      width: 50vw;
+      width: 70vw;
     }
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1250px) {
   @media only screen and (min-height: 821px) {
     .width-container {
-      width: 40vw;
+      width: 50vw;
     }
     .menu-items-container {
-      width: 40vw;
+      width: 50vw;
     }
   }
 }

@@ -55,3 +55,14 @@
   margin-top: 1vh;
   font-weight: bold;
 }
+.content-item-container > img {
+  max-width: 800px;
+}
+
+.content-media-container {
+  padding: 1vh;
+  display: flex;
+  width: auto;
+  max-height: 100vh;
+  justify-content: center;
+}
