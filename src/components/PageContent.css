@@ -58,6 +58,7 @@
 }
 .home-page-card > p {
   margin-top: 2vh;
+  padding: 1vh;
 }
 .menu-tip > h3 {
   display: flex;
@@ -70,4 +71,9 @@
 }
 .menu-tip > i {
   font-size: 8vh;
+}
+
+.search-results-error {
+  color: black;
+  font-weight: bold;
 }

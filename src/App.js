@@ -13,7 +13,7 @@ function App() {
 
   const getSearchValue = () => {
     const textValue = document.getElementById("search-box").value;
-    if (textValue === "") return "dream";
+    if (textValue === "") return "vancityreynolds";
     else return textValue;
   };
 

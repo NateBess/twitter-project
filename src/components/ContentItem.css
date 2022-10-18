@@ -55,14 +55,18 @@
   margin-top: 1vh;
   font-weight: bold;
 }
-.content-item-container > img {
-  max-width: 800px;
+.content-media-container > img {
+  object-fit: cover;
+  max-width: 98%;
 }
 
 .content-media-container {
-  padding: 1vh;
   display: flex;
-  width: auto;
-  max-height: 100vh;
+  height: auto;
   justify-content: center;
+}
+
+.content-media-container > video {
+  max-width: 100%;
+  display: flex;
 }
