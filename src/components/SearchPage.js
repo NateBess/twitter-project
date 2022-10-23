@@ -9,18 +9,25 @@ function SearchPage({ searchResults }) {
         {searchResults.map((tweet) => {
           return (
             <ContentItem
-              key={tweet.tweetId}
-              userId={tweet.userId}
-              tweetId={tweet.tweetId}
-              name={tweet.name}
-              username={tweet.username}
-              tweetText={tweet.tweetText}
-              metrics={tweet.metrics}
-              timeStamp={tweet.timeStamp}
-              videoOptions={tweet.video_options}
-              pictureUrl={tweet.picture_url}
-              previewImage={tweet.preview_image_link}
-              profilePic={tweet.profilePic}
+              key={tweet.tweetData.tweetId}
+              userId={tweet.tweetData.userId}
+              tweetId={tweet.tweetData.tweetId}
+              name={tweet.tweetUserData.name}
+              username={tweet.tweetUserData.username}
+              tweetText={tweet.tweetData.tweetText}
+              likes={tweet.tweetData.likes}
+              retweets={tweet.tweetData.retweets}
+              timeStamp={tweet.tweetData.timeStamp}
+              profilePic={tweet.tweetUserData.profile_image_url}
+              //={}
+              //={}
+
+              /*
+              timeStamp={tweet.tweetData.timeStamp}
+              videoOptions={tweet.tweetData.video_options}
+              pictureUrl={tweet.tweetData.picture_url}
+              previewImage={tweet.tweetData.preview_image_link}
+              */
             />
           );
         })}

@@ -7,13 +7,12 @@ function ContentItem({
   name,
   username,
   tweetText,
-  metrics,
+  likes,
+  retweets,
   timeStamp,
-  videoOptions,
-  pictureUrl,
-  previewImage,
   profilePic,
 }) {
+  /*
   const returnVideoLink = (videoOptions) => {
     let largest = 0;
     let largestURL = "";
@@ -27,6 +26,7 @@ function ContentItem({
     } catch {}
     return largestURL;
   };
+  */
 
   return (
     <div className="content-item-container">
@@ -40,14 +40,15 @@ function ContentItem({
         </div>
         <div className="content-metrics">
           <p>
-            <i className="fa-solid fa-heart"></i> {metrics.like_count}
+            <i className="fa-solid fa-heart"></i> {likes}
           </p>
           <p>
-            <i className="fa-solid fa-retweet"></i> {metrics.retweet_count}
+            <i className="fa-solid fa-retweet"></i> {retweets}
           </p>
         </div>
       </div>
       <div className="content-text-container">{tweetText}</div>
+      {/*
       <div className="content-media-container">
         {pictureUrl !== "NONE" ? <img src={pictureUrl}></img> : <div></div>}
         {videoOptions !== "NONE" ? (
@@ -60,7 +61,7 @@ function ContentItem({
         ) : (
           <div></div>
         )}
-      </div>
+       </div> */}
       <div className="timestamp">{timeStamp}</div>
     </div>
   );

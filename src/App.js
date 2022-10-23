@@ -17,18 +17,28 @@ function App() {
     else return textValue;
   };
 
-  const getData = async () => {
-    const searchData = await axios.post(baseURL, {
+  const getDataUserSearch = async () => {
+    const searchData = await axios.post(baseURL + "search-user", {
       searchValue: getSearchValue(),
     });
 
-    setSearchResults(searchData.data.tweets);
-    setNextToken(searchData.data.nextToken);
+    setSearchResults(searchData.data.tweetArray);
+    setNextToken(searchData.data.next_token);
+    console.log("Data Requested");
+  };
+
+  const getDataContentSearch = async () => {
+    const searchData = await axios.post(baseURL + "search-user", {
+      searchValue: getSearchValue(),
+    });
+
+    setSearchResults(searchData.data.tweetArray);
+    setNextToken(searchData.data.next_token);
     console.log("Data Requested");
   };
 
   useEffect(() => {
-    getData();
+    getDataUserSearch();
   }, []);
 
   return (
@@ -36,7 +46,11 @@ function App() {
       <main className="App-container">
         <PageContent currentPage={currentPage} searchResults={searchResults} />
       </main>
-      <Menu setCurrentPage={setCurrentPage} getData={getData} />
+      <Menu
+        setCurrentPage={setCurrentPage}
+        getDataUserSearch={getDataUserSearch}
+        getDataContentSearch={getDataContentSearch}
+      />
     </div>
   );
 }

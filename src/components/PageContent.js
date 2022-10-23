@@ -32,7 +32,11 @@ function PageContent({ currentPage, searchResults }) {
   if (currentPage === "Random") {
     return (
       <div className="content-container width-container">
-        <h1>TEST</h1>
+        <h1>The Primeagen</h1>
+        <h1>Ryan Reynolds</h1>
+        <h1>Graham Stephan</h1>
+        <h1>Jordan B Peterson</h1>
+        <h1></h1>
       </div>
     );
   }

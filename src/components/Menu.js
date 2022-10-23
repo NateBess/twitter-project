@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Menu.css";
 
-function Menu({ setCurrentPage, getData }) {
+function Menu({ setCurrentPage, getDataUserSearch, getDataContentSearch }) {
   const [menuStatus, setMenuStatus] = useState(false);
   return (
     <div className="menu-container width-container">
@@ -42,7 +42,7 @@ function Menu({ setCurrentPage, getData }) {
             <button
               className="search-button"
               onClick={() => {
-                getData();
+                getDataUserSearch();
               }}
             >
               <i className="fa-solid fa-magnifying-glass"></i>
@@ -50,7 +50,7 @@ function Menu({ setCurrentPage, getData }) {
             <button
               className="search-button search-button-content"
               onClick={() => {
-                getData();
+                getDataContentSearch();
               }}
             >
               <i className="fa-solid fa-comment"></i>
