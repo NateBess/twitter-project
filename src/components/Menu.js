@@ -18,7 +18,6 @@ function Menu({ setCurrentPage, getDataUserSearch, getDataContentSearch }) {
           )}
         </button>
       </div>
-      {/* <div className="menu-items-container"> */}
       <div
         className={
           menuStatus

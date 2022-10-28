@@ -9,7 +9,6 @@ const baseURL = "http://192.168.0.117:8000/";
 function App() {
   const [currentPage, setCurrentPage] = useState("Home");
   const [searchResults, setSearchResults] = useState([]);
-  const [nextToken, setNextToken] = useState("");
 
   const getSearchValue = () => {
     const textValue = document.getElementById("search-box").value;
@@ -18,23 +17,19 @@ function App() {
   };
 
   const getDataUserSearch = async () => {
+    setCurrentPage("Search");
     const searchData = await axios.post(baseURL + "search-user", {
       searchValue: getSearchValue(),
     });
-
     setSearchResults(searchData.data.tweetArray);
-    setNextToken(searchData.data.next_token);
-    console.log("Data Requested");
   };
 
   const getDataContentSearch = async () => {
-    const searchData = await axios.post(baseURL + "search-user", {
+    setCurrentPage("Search");
+    const searchData = await axios.post(baseURL + "search-content", {
       searchValue: getSearchValue(),
     });
-
     setSearchResults(searchData.data.tweetArray);
-    setNextToken(searchData.data.next_token);
-    console.log("Data Requested");
   };
 
   useEffect(() => {

@@ -11,8 +11,8 @@ function ContentItem({
   retweets,
   timeStamp,
   profilePic,
+  mediaData,
 }) {
-  /*
   const returnVideoLink = (videoOptions) => {
     let largest = 0;
     let largestURL = "";
@@ -26,7 +26,6 @@ function ContentItem({
     } catch {}
     return largestURL;
   };
-  */
 
   return (
     <div className="content-item-container">
@@ -48,20 +47,30 @@ function ContentItem({
         </div>
       </div>
       <div className="content-text-container">{tweetText}</div>
-      {/*
+
       <div className="content-media-container">
-        {pictureUrl !== "NONE" ? <img src={pictureUrl}></img> : <div></div>}
-        {videoOptions !== "NONE" ? (
-          <video controls>
-            <source
-              src={returnVideoLink(videoOptions)}
-              type="video/mp4"
-            ></source>
-          </video>
-        ) : (
-          <div></div>
-        )}
-       </div> */}
+        {Array.from(mediaData).map((mediaItem) => {
+          if (mediaItem.type === "photo")
+            return (
+              <div className="media-item">
+                <img src={mediaItem.image_url}></img>
+              </div>
+            );
+          if (mediaItem.type === "video")
+            return (
+              <div className="media-item">
+                <video controls>
+                  <source
+                    src={returnVideoLink(mediaItem.variants)}
+                    type="video/mp4"
+                  ></source>
+                </video>
+              </div>
+            );
+          if (mediaItem.type === "animated_gif")
+            return <div className="media-item">GIF</div>;
+        })}
+      </div>
       <div className="timestamp">{timeStamp}</div>
     </div>
   );

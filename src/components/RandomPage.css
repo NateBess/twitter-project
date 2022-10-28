@@ -1,0 +1,24 @@
+.favorite-users-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.favorite-user {
+  font-weight: bold;
+  font-size: 2vh;
+}
+
+.favorite-user-button {
+  padding: 1vh;
+}
+
+button > img {
+  width: auto;
+  height: 5vh;
+  border-radius: 5vh;
+}
+
+.space-container {
+  height: 10vh;
+  margin-bottom: 20vh;
+}

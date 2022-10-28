@@ -19,15 +19,7 @@ function SearchPage({ searchResults }) {
               retweets={tweet.tweetData.retweets}
               timeStamp={tweet.tweetData.timeStamp}
               profilePic={tweet.tweetUserData.profile_image_url}
-              //={}
-              //={}
-
-              /*
-              timeStamp={tweet.tweetData.timeStamp}
-              videoOptions={tweet.tweetData.video_options}
-              pictureUrl={tweet.tweetData.picture_url}
-              previewImage={tweet.tweetData.preview_image_link}
-              */
+              mediaData={tweet.tweetMediaData}
             />
           );
         })}
